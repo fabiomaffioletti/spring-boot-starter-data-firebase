@@ -15,6 +15,7 @@ import org.springframework.boot.test.context.TestConfiguration;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Import;
 import org.springframework.test.context.junit4.SpringRunner;
+import org.springframework.web.client.HttpClientErrorException;
 import org.springframework.web.client.RestTemplate;
 
 import java.util.List;
@@ -87,6 +88,22 @@ public class PostRepositoryTest {
 
         posts = postRepository.find(Filter.FilterBuilder.builder().orderBy("title").limitToFirst(1).build());
         assertThat(posts.size(), is(1));
+    }
+
+    @Test
+    public void itShouldCreateAPostIfUpdatingAnUnexistingPost() {
+        try {
+            postRepository.get("unexisting");
+            fail();
+        } catch (HttpClientErrorException e) {
+            Post post = new Post();
+            post.setId("unexisting");
+            post.setTitle("Title of an unexisting post");
+            post = postRepository.update(post);
+            assertNotNull(post);
+            assertThat(post.getId(), is("unexisting"));
+            assertThat(post.getTitle(), is("Title of an unexisting post"));
+        }
     }
 
     @Test
