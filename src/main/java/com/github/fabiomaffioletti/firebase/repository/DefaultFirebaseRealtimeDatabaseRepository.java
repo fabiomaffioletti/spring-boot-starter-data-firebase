@@ -9,7 +9,6 @@ import com.google.common.collect.Lists;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.core.annotation.AnnotationUtils;
-import org.springframework.data.repository.NoRepositoryBean;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.HttpStatus;
@@ -31,7 +30,6 @@ import java.util.stream.LongStream;
  * - https://firebase.google.com/docs/database/rest/save-data?authuser=0
  * - https://firebase.google.com/docs/database/rest/retrieve-data?authuser=0
  */
-@NoRepositoryBean
 @SuppressWarnings("unchecked")
 public class DefaultFirebaseRealtimeDatabaseRepository<T, ID> implements FirebaseRealtimeDatabaseRepository<T, ID> {
 
