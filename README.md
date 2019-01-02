@@ -1,7 +1,8 @@
 # Firebase Realtime Database repositories for Spring Boot
 
 Provides a generic way to interact with the Firebase Realtime Database in a Spring Boot application. It basically provides
-a generic repository that mimics the main REST endpoints to be used most probably in backend admin applications:
+a generic repository that mimics the main REST endpoints to be used most probably in backend admin applications. Here is the list
+of methods that have been implemented:
 
 - set
 - update
@@ -14,7 +15,7 @@ a generic repository that mimics the main REST endpoints to be used most probabl
 
 ### Declare dependencies
 
-To use this, just include the dependency in your pom:
+To use this, just include these dependencies in your pom:
 
 ```xml
 <dependency>
@@ -91,7 +92,7 @@ But they usually come easily with web applications using:
 ### Notes
 This is at its very early development stages. I did it because I found a lot of code and configuration duplication in 
 every Firebase project I worked on. It is very far from what I would like it to be, but still I wanted to expose it to 
-the community, hoping that it would be improved and used by people with the same needs as me.
+the community, hoping that it would be improved and used by people with the same needs as mines.
 
 I could not commit the firebase service account file I am using for testing, so if you would like to contribute, you should
 create the service account file and put it in the `src/test/resources/application.properties` file.
