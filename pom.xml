@@ -71,6 +71,7 @@
             <groupId>com.google.firebase</groupId>
             <artifactId>firebase-admin</artifactId>
             <version>6.6.0</version>
+            <scope>provided</scope>
         </dependency>
 
         <dependency>
