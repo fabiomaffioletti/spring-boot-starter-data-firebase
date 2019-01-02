@@ -13,6 +13,20 @@ of methods that have been implemented:
 - find
 - findAll
 
+## Getting started
+
+### Preconditions
+- you need to have a `RestTemplate` bean available
+- you need to have `Jackson` on the classpath
+
+But they usually come easily with web applications using:
+```xml
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-web</artifactId>
+</dependency>
+```
+
 ### Declare dependencies
 
 To use this, just include these dependencies in your pom:
@@ -77,19 +91,7 @@ public class AlbumRepository extends DefaultFirebaseRealtimeDatabaseRepository<A
 Finally, put `@EnableFirebaseRepositories` just next to `@SpringBootApplication` or in any `@Configuration` class in your
 application.
 
-### Preconditions
-- you need to have a `RestTemplate` bean available
-- you need to have `Jackson` on the classpath
-
-But they usually come easily with web applications using:
-```xml
-<dependency>
-    <groupId>org.springframework.boot</groupId>
-    <artifactId>spring-boot-starter-web</artifactId>
-</dependency>
-```
-
-### Notes
+## Notes
 This is at its very early development stages. I did it because I found a lot of code and configuration duplication in 
 every Firebase project I worked on. It is very far from what I would like it to be, but still I wanted to expose it to 
 the community, hoping that it would be improved and used by people with the same needs as mines.
