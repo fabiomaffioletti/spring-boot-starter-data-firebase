@@ -35,7 +35,7 @@ To use this, just include these dependencies in your pom:
 <dependency>
     <groupId>com.github.fabiomaffioletti</groupId>
     <artifactId>spring-boot-starter-data-firebase</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>1.0.0.RELEASE</version>
 </dependency>
 ```
 
