@@ -17,6 +17,8 @@ public class Post {
 
     private List<Tag> tags;
 
+    private String[] categories;
+
     public String getId() {
         return id;
     }
@@ -47,5 +49,13 @@ public class Post {
 
     public void setTags(List<Tag> tags) {
         this.tags = tags;
+    }
+
+    public String[] getCategories() {
+        return categories;
+    }
+
+    public void setCategories(String[] categories) {
+        this.categories = categories;
     }
 }

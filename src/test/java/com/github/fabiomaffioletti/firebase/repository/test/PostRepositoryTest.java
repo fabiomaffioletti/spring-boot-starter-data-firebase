@@ -65,9 +65,11 @@ public class PostRepositoryTest {
         Post post = new Post();
         post.setTitle("My test post # 1");
         post.setBody("My test post # 1 body");
+        post.setCategories(new String[]{"Category #1", "Category #2", "Category #3"});
         post = postRepository.push(post);
         assertNotNull(post);
         assertNotNull(post.getId());
+        assertThat(post.getCategories().length, is(3));
 
         post = postRepository.get(post.getId());
         assertThat(post.getTitle(), is("My test post # 1"));

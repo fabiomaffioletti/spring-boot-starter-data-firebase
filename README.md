@@ -98,3 +98,8 @@ the community, hoping that it would be improved and used by people with the same
 
 I could not commit the firebase service account file I am using for testing, so if you would like to contribute, you should
 create the service account file and put it in the `src/test/resources/application.properties` file.
+
+### Next steps
+- Provide repositories for Cloud Firestore
+- Provide repositories for Cloud Storage
+- Automatically register repository beans interfaces rather than annotated classes
